@@ -1,6 +1,6 @@
-# fortran Harmonic Analysis
+# fortran Harmonic Analysis 3D
 
-This library contains Fortran scripts to do an harmonic analysis
+This library contains Fortran scripts to do an harmonic analysis in 3D
 
 **References**
 
@@ -11,7 +11,7 @@ Wyrtki, K. (1965). The annual and semiannual variation of sea surface temperatur
  
  **Getting Started**
 
-1. Open *param.f90* and modify line 5,8,9,10,11 with your netcdf file (file_in), time (t_NAME), lon (x_NAME), lat (y_NAME) and variable (temp_NAME):
+1. Open *param.f90* and modify line 5,8,9,10,11,12 with your netcdf file (file_in), time (t_NAME), lon (x_NAME), lat (y_NAME), depth (z_NAME) and variable (temp_NAME):
  ```
 
  character(len=*),parameter :: file_in="your_file.nc"
@@ -22,10 +22,12 @@ Wyrtki, K. (1965). The annual and semiannual variation of sea surface temperatur
 
  character(len=*),parameter :: x_NAME="longitude"
 
+ character(len=*),parameter :: z_NAME="depth"
+
  character(len=*),parameter :: temp_NAME="variable"
  ```
  
- also modify line 13, 15 and 17 with your lon grid number (nx), lat grid number (ny), time steps (nt) missing_val , scale factor (sf_thetao) and add offset (af_thetao):
+ also modify line 14 and 18 with your lon grid number (nx), lat grid number (ny), depth grid number, time steps (nt), missing_val , scale factor (sf_thetao) and add offset (af_thetao):
  ```
  
  integer, parameter :: nx = 280, ny = 321, nt = 9647
