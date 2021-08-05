@@ -27,7 +27,7 @@ Wyrtki, K. (1965). The annual and semiannual variation of sea surface temperatur
  character(len=*),parameter :: temp_NAME="variable"
  ```
  
- also modify line 14 and 18 with your lon grid number (nx), lat grid number (ny), depth grid number, time steps (nt), missing_val , scale factor (sf_thetao) and add offset (af_thetao):
+ also modify line 14 and 18 with your lon grid number (nx), lat grid number (ny), depth grid number (nz), time steps (nt), missing_val , scale factor (sf_thetao) and add offset (af_thetao):
  ```
  
  integer, parameter :: nx = 280, ny = 321, nt = 9647
